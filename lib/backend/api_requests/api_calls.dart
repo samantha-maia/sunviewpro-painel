@@ -3450,6 +3450,12 @@ class GetUnityCall {
     );
   }
 
+  List? items(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+
   List<int>? id(dynamic response) => (getJsonField(
         response,
         r'''$[:].id''',
@@ -3549,6 +3555,12 @@ class DisciplineCall {
       alwaysAllowBody: false,
     );
   }
+
+  List? items(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
 
   List<int>? id(dynamic response) => (getJsonField(
         response,
@@ -5798,6 +5810,7 @@ class ProjectsGroup {
       DeleteProjectsWorksSituationsRecordCall();
   static QueryAllTeamsLeadersRecordsCall queryAllTeamsLeadersRecordsCall =
       QueryAllTeamsLeadersRecordsCall();
+  static ImportCronogramaCall importCronogramaCall = ImportCronogramaCall();
   static GetTeamsMembersRecordCall getTeamsMembersRecordCall =
       GetTeamsMembersRecordCall();
   static QueryAllProjectsStatusesRecordsCall
@@ -5848,6 +5861,7 @@ class ProjectsGroup {
   static AddSubtasksCall addSubtasksCall = AddSubtasksCall();
   static EditSubtasksCall editSubtasksCall = EditSubtasksCall();
   static GetSubtasksCall getSubtasksCall = GetSubtasksCall();
+  static GetUnityCall getUnityCall = GetUnityCall();
 }
 
 class EditTeamsLeadersRecordCall {
@@ -9237,6 +9251,8 @@ class QueryAllLogsCloneCall {
       ) as List?;
 }
 
+
+
 class ExportInventoryCall {
   Future<ApiCallResponse> call({
     int? categoryId,
@@ -9481,4 +9497,81 @@ String? escapeStringForJson(String? input) {
       .replaceAll('"', '\\"')
       .replaceAll('\n', '\\n')
       .replaceAll('\t', '\\t');
+}
+
+
+
+
+/// End Projects Group Code
+
+class ImportCronogramaCall {
+  Future<ApiCallResponse> call({
+    String? bearerAuth = '',
+    int? projectsId,
+    dynamic? tasksJson,
+  }) async {
+    final baseUrl = ProjectsGroup.getBaseUrl();
+
+    final tasks = _serializeJson(tasksJson, true);
+    final ffApiRequestBody = '''
+{
+  "projects_id": ${projectsId},
+  "lista_tarefas": ${tasks}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Import cronograma',
+      apiUrl: '${baseUrl}/import_cronograma',
+      callType: ApiCallType.POST,
+      headers: {
+        'X-data-source': 'dev',
+        'Authorization': 'Bearer ${bearerAuth}',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+/// End Projects Group Code
+
+class GetUsersCall {
+  Future<ApiCallResponse> call({
+    String? bearerAuth = '',
+  }) async {
+    final baseUrl = TrackersMapGroup.getBaseUrl();
+
+    return ApiManager.instance.makeApiCall(
+      callName: 'Get Users',
+      apiUrl: '${baseUrl}/users',
+      callType: ApiCallType.GET,
+      headers: {
+        'X-data-source': 'dev',
+        'Authorization': 'Bearer ${bearerAuth}',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  List<String>? names(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }

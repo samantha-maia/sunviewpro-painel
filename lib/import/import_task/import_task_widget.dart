@@ -48,6 +48,18 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
       _model.allTasks = await TasksGroup.tarefasSemPageEPerpageCall.call(
         token: FFAppState().token,
       );
+      
+      _model.allEquipments = await ProjectsGroup.equipamentsTypeCall.call(
+        bearerAuth: FFAppState().token,
+      );
+      
+      _model.allUnits = await ProjectsGroup.getUnityCall.call(
+        token: FFAppState().token,
+      );
+
+      _model.allDisciplines = await TasksGroup.disciplineCall.call(
+        token: FFAppState().token,
+      );
 
       if ((_model.allTasks?.succeeded ?? true)) {
         FFAppState().headers = [];
@@ -683,11 +695,7 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
                                                     text: TextSpan(
                                                       children: [
                                                         TextSpan(
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'o0ue2vmh' /* Linhas Lidas:  */,
-                                                          ),
+                                                          text: 'Colunas Lidas: ',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -990,54 +998,8 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                        Container(
-                                                                          width:
-                                                                              150.0,
-                                                                          height:
-                                                                              30.0,
-                                                                          decoration:
-                                                                              BoxDecoration(
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primaryBackground,
-                                                                            borderRadius:
-                                                                                BorderRadius.only(
-                                                                              bottomLeft: Radius.circular(0.0),
-                                                                              bottomRight: Radius.circular(0.0),
-                                                                              topLeft: Radius.circular(0.0),
-                                                                              topRight: Radius.circular(8.0),
-                                                                            ),
-                                                                            border:
-                                                                                Border.all(
-                                                                              color: FlutterFlowTheme.of(context).alternate,
-                                                                            ),
-                                                                          ),
-                                                                          alignment: AlignmentDirectional(
-                                                                              -1.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                12.0,
-                                                                                0.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                '8acdu0fe' /* Responsavél */,
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    font: GoogleFonts.lexend(
-                                                                                      fontWeight: FontWeight.w500,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                    ),
-                                                                                    letterSpacing: 0.0,
-                                                                                    fontWeight: FontWeight.w500,
-                                                                                    fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
+
+
                                                                       ],
                                                                     ),
                                                                   ),
@@ -1286,84 +1248,7 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                        Builder(
-                                                                          builder: (context) =>
-                                                                              InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              await showAlignedDialog(
-                                                                                barrierColor: Colors.transparent,
-                                                                                context: context,
-                                                                                isGlobal: false,
-                                                                                avoidOverflow: true,
-                                                                                targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                                followerAnchor: AlignmentDirectional(-1.0, -1.0).resolve(Directionality.of(context)),
-                                                                                builder: (dialogContext) {
-                                                                                  return Material(
-                                                                                    color: Colors.transparent,
-                                                                                    child: GestureDetector(
-                                                                                      onTap: () {
-                                                                                        FocusScope.of(dialogContext).unfocus();
-                                                                                        FocusManager.instance.primaryFocus?.unfocus();
-                                                                                      },
-                                                                                      child: HeadersWidget(
-                                                                                        sequencia: 3,
-                                                                                      ),
-                                                                                    ),
-                                                                                  );
-                                                                                },
-                                                                              );
-                                                                            },
-                                                                            child:
-                                                                                Container(
-                                                                              width: 150.0,
-                                                                              height: 30.0,
-                                                                              decoration: BoxDecoration(
-                                                                                color: FlutterFlowTheme.of(context).status03,
-                                                                                border: Border.all(
-                                                                                  color: FlutterFlowTheme.of(context).alternate,
-                                                                                ),
-                                                                              ),
-                                                                              child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                                                                                child: Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                  children: [
-                                                                                    Text(
-                                                                                      valueOrDefault<String>(
-                                                                                        FFAppState().headersSet.where((e) => e.sequencia == 3).toList().isNotEmpty ? functions.returnNomeHeaders(FFAppState().headersSet.toList(), 3) : 'Selecione',
-                                                                                        'Selecione',
-                                                                                      ),
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            font: GoogleFonts.lexend(
-                                                                                              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                            ),
-                                                                                            letterSpacing: 0.0,
-                                                                                            fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                          ),
-                                                                                    ),
-                                                                                    Icon(
-                                                                                      Icons.keyboard_arrow_down_rounded,
-                                                                                      color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                      size: 24.0,
-                                                                                    ),
-                                                                                  ],
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
+
                                                                       ],
                                                                     ),
                                                                   ),
@@ -1373,7 +1258,7 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
                                                                 onPressed: (FFAppState()
                                                                             .headersSet
                                                                             .length <
-                                                                        4)
+                                                                        3)
                                                                     ? null
                                                                     : () async {
                                                                         _model.previa =
@@ -1695,108 +1580,213 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 30.0,
-                                                                                height: 30.0,
-                                                                                decoration: BoxDecoration(
-                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                  border: Border.all(
-                                                                                    color: FlutterFlowTheme.of(context).alternate,
-                                                                                  ),
-                                                                                ),
-                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'f69gg7l6' /* Responsável */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          font: GoogleFonts.lexend(
-                                                                                            fontWeight: FontWeight.w500,
-                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                          ),
-                                                                                          fontSize: 14.0,
-                                                                                          letterSpacing: 0.0,
-                                                                                          fontWeight: FontWeight.w500,
-                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                        ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 30.0,
-                                                                                height: 30.0,
-                                                                                decoration: BoxDecoration(
-                                                                                  color: FlutterFlowTheme.of(context).primary,
-                                                                                  borderRadius: BorderRadius.only(
-                                                                                    bottomLeft: Radius.circular(0.0),
-                                                                                    bottomRight: Radius.circular(0.0),
-                                                                                    topLeft: Radius.circular(0.0),
-                                                                                    topRight: Radius.circular(8.0),
-                                                                                  ),
-                                                                                  border: Border.all(
-                                                                                    color: FlutterFlowTheme.of(context).alternate,
-                                                                                  ),
-                                                                                ),
-                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
-                                                                                  child: RichText(
-                                                                                    textScaler: MediaQuery.of(context).textScaler,
-                                                                                    text: TextSpan(
-                                                                                      children: [
-                                                                                        TextSpan(
-                                                                                          text: FFLocalizations.of(context).getText(
-                                                                                            'w3gonkdw' /* Responsável */,
-                                                                                          ),
-                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                font: GoogleFonts.lexend(
-                                                                                                  fontWeight: FontWeight.w500,
-                                                                                                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                ),
-                                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                                fontSize: 14.0,
-                                                                                                letterSpacing: 0.0,
-                                                                                                fontWeight: FontWeight.w500,
-                                                                                                fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                              ),
-                                                                                        ),
-                                                                                        TextSpan(
-                                                                                          text: FFLocalizations.of(context).getText(
-                                                                                            '4wnejbhk' /*  (Comparação) */,
-                                                                                          ),
-                                                                                          style: TextStyle(
-                                                                                            color: FlutterFlowTheme.of(context).alternate,
-                                                                                          ),
-                                                                                        )
-                                                                                      ],
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            font: GoogleFonts.lexend(
-                                                                                              fontWeight: FontWeight.w500,
-                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                            ),
-                                                                                            fontSize: 14.0,
-                                                                                            letterSpacing: 0.0,
-                                                                                            fontWeight: FontWeight.w500,
-                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                          ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
+                                                                    Expanded(
+                                                                      child: Container(
+                                                                        width: 30.0,
+                                                                        height: 30.0,
+                                                                        decoration: BoxDecoration(
+                                                                          color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                          border: Border.all(
+                                                                            color: FlutterFlowTheme.of(context).alternate,
+                                                                          ),
                                                                         ),
-                                                                        Flexible(
+                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                        child: Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                                                                          child: Text(
+                                                                            'Equipamento',
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  font: GoogleFonts.lexend(
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                  ),
+                                                                                  fontSize: 14.0,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+
+                                                                        // PESO TAREFA
+                                                                        Container(
+                                                                          width: 100.0,
+                                                                          height: 30.0,
+                                                                          decoration: BoxDecoration(
+                                                                            color: FlutterFlowTheme.of(context)
+                                                                                .primaryBackground,
+                                                                            border: Border.all(
+                                                                              color: FlutterFlowTheme.of(context)
+                                                                                  .alternate,
+                                                                            ),
+                                                                          ),
+                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                          child: Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                8.0, 0.0, 0.0, 0.0),
+                                                                            child: Text(
+                                                                              'Peso Tarefa',
+                                                                              style: FlutterFlowTheme.of(context)
+                                                                                  .bodyMedium
+                                                                                  .override(
+                                                                                    font: GoogleFonts.lexend(
+                                                                                      fontWeight: FontWeight.w700,
+                                                                                    ),
+                                                                                    fontSize: 12.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        // UNIDADE MEDIDA
+                                                                        Container(
+                                                                          width: 120.0,
+                                                                          height: 30.0,
+                                                                          decoration: BoxDecoration(
+                                                                            color: FlutterFlowTheme.of(context)
+                                                                                .primaryBackground,
+                                                                            border: Border.all(
+                                                                              color: FlutterFlowTheme.of(context)
+                                                                                  .alternate,
+                                                                            ),
+                                                                          ),
+                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                          child: Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                8.0, 0.0, 0.0, 0.0),
+                                                                            child: Text(
+                                                                              'Unidade/Medida',
+                                                                              style: FlutterFlowTheme.of(context)
+                                                                                  .bodyMedium
+                                                                                  .override(
+                                                                                    font: GoogleFonts.lexend(
+                                                                                      fontWeight: FontWeight.w700,
+                                                                                    ),
+                                                                                    fontSize: 12.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        // QUANTIDADE
+                                                                        Container(
+                                                                          width: 100.0,
+                                                                          height: 30.0,
+                                                                          decoration: BoxDecoration(
+                                                                            color: FlutterFlowTheme.of(context)
+                                                                                .primaryBackground,
+                                                                            border: Border.all(
+                                                                              color: FlutterFlowTheme.of(context)
+                                                                                  .alternate,
+                                                                            ),
+                                                                          ),
+                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                          child: Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                8.0, 0.0, 0.0, 0.0),
+                                                                            child: Text(
+                                                                              'Quantidade',
+                                                                              style: FlutterFlowTheme.of(context)
+                                                                                  .bodyMedium
+                                                                                  .override(
+                                                                                    font: GoogleFonts.lexend(
+                                                                                      fontWeight: FontWeight.w700,
+                                                                                    ),
+                                                                                    fontSize: 12.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        // DISCIPLINA
+                                                                        Container(
+                                                                          width: 120.0,
+                                                                          height: 30.0,
+                                                                          decoration: BoxDecoration(
+                                                                            color: FlutterFlowTheme.of(context)
+                                                                                .primaryBackground,
+                                                                            border: Border.all(
+                                                                              color: FlutterFlowTheme.of(context)
+                                                                                  .alternate,
+                                                                            ),
+                                                                          ),
+                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                          child: Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                8.0, 0.0, 0.0, 0.0),
+                                                                            child: Text(
+                                                                              'Disciplina',
+                                                                              style: FlutterFlowTheme.of(context)
+                                                                                  .bodyMedium
+                                                                                  .override(
+                                                                                    font: GoogleFonts.lexend(
+                                                                                      fontWeight: FontWeight.w700,
+                                                                                    ),
+                                                                                    fontSize: 12.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        // QTD DE TAREFAS
+                                                                        Container(
+                                                                          width: 100.0,
+                                                                          height: 30.0,
+                                                                          decoration: BoxDecoration(
+                                                                            color: FlutterFlowTheme.of(context)
+                                                                                .primaryBackground,
+                                                                            border: Border.all(
+                                                                              color: FlutterFlowTheme.of(context)
+                                                                                  .alternate,
+                                                                            ),
+                                                                          ),
+                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                          child: Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                8.0, 0.0, 0.0, 0.0),
+                                                                            child: Text(
+                                                                              'Qtd de Tarefas',
+                                                                              style: FlutterFlowTheme.of(context)
+                                                                                  .bodyMedium
+                                                                                  .override(
+                                                                                    font: GoogleFonts.lexend(
+                                                                                      fontWeight: FontWeight.w700,
+                                                                                    ),
+                                                                                    fontSize: 12.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+
+                                                                    Flexible(
                                                                           child:
                                                                               Builder(
                                                                             builder:
                                                                                 (context) {
                                                                               final csvJason = _model.csv.toList();
+                                                                              final equipamentIds = ProjectsGroup.equipamentsTypeCall.id(
+                                                                                _model.allEquipments?.jsonBody,
+                                                                              ) ?? [];
+                                                                              final equipamentNames = ProjectsGroup.equipamentsTypeCall.type(
+                                                                                _model.allEquipments?.jsonBody,
+                                                                              ) ?? [];
+                                                                              
+                                                                              // Build Task -> Equipment Map
+                                                                              final Map<int, int> taskToEquipIdMap = {};
+                                                                              final tasksList = _model.allTasks?.jsonBody;
+                                                                              if (tasksList is List) {
+                                                                                for (var t in tasksList) {
+                                                                                  if (t is Map) {
+                                                                                     // Safely parse IDs to int to avoid type mismatch
+                                                                                    final tId = int.tryParse(t['id']?.toString() ?? '');
+                                                                                    // Check strict path 'equipaments_types' -> 'id'
+                                                                                    int? eqId;
+                                                                                    if (t['equipaments_types'] is Map) {
+                                                                                       eqId = int.tryParse(t['equipaments_types']['id']?.toString() ?? '');
+                                                                                    }
+                                                                                    
+                                                                                    if (tId != null && eqId != null) {
+                                                                                      taskToEquipIdMap[tId] = eqId;
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
 
                                                                               return SingleChildScrollView(
                                                                                 child: Column(
@@ -1804,14 +1794,28 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
                                                                                   children: List.generate(csvJason.length, (csvJasonIndex) {
                                                                                     final csvJasonItem = csvJason[csvJasonIndex];
                                                                                     return CsvCompWidget(
-                                                                                      key: Key('Keyizd_${csvJasonIndex}_of_${csvJason.length}'),
-                                                                                      parameter1: TasksGroup.tarefasSemPageEPerpageCall.description(
-                                                                                        (_model.allTasks?.jsonBody ?? ''),
-                                                                                      ),
+                                                        key: Key('Keyizd_${csvJasonIndex}_of_${csvJason.length}'),
+                                                        index: csvJasonIndex + 1,
+                                                        parameter1: TasksGroup.tarefasSemPageEPerpageCall.description(
+                                                          (_model.allTasks?.jsonBody ?? ''),
+                                                        ),
                                                                                       parameter2: TasksGroup.tarefasSemPageEPerpageCall.id(
                                                                                         (_model.allTasks?.jsonBody ?? ''),
                                                                                       ),
+                                                                                      units: ProjectsGroup.getUnityCall.items(
+                                                                                        _model.allUnits?.jsonBody,
+                                                                                      ),
+                                                                                      disciplines: TasksGroup.disciplineCall.items(
+                                                                                        _model.allDisciplines?.jsonBody,
+                                                                                      ),
+                                                                                      equipamentNames: equipamentNames,
+                                                                                      equipamentIds: equipamentIds,
+                                                                                      taskToEquipIdMap: taskToEquipIdMap,
                                                                                       csvJson: csvJasonItem,
+                                                                                      taskName: valueOrDefault<String>(
+                                                                                        (csvJasonItem as Map<String, dynamic>)[functions.returnNomeHeaders(FFAppState().headersSet.toList(), 0)],
+                                                                                        '',
+                                                                                      ),
                                                                                     );
                                                                                   }),
                                                                                 ),
@@ -1830,12 +1834,98 @@ class _ImportTaskWidgetState extends State<ImportTaskWidget> {
                                                                         MainAxisAlignment
                                                                             .end,
                                                                     children: [
-                                                                      FFButtonWidget(
-                                                                        onPressed:
-                                                                            () {
-                                                                          print(
-                                                                              'Button pressed ...');
-                                                                        },
+                                                                        FFButtonWidget(
+                                                                          onPressed: () async {
+                                                                            var _shouldSetState = false;
+                                                                            
+                                                                            // Maps for ID conversion
+                                                                            final unityMap = {
+                                                                              'Metro (m)': 1,
+                                                                              'Unidade (un)': 2,
+                                                                              'Hora (h)': 3,
+                                                                              'Metro Quadrado (m²)': 4,
+                                                                              'Metro Cúbico (m³)': 5,
+                                                                              '': null,
+                                                                            };
+                                                                            final disciplineMap = {
+                                                                              'Civil': 1,
+                                                                              'Elétrica': 2,
+                                                                              'Mecânica': 3,
+                                                                              'Geral': 4,
+                                                                              '': null,
+                                                                            };
+
+                                                                            // Transform CSV list to API structure
+                                                                            final List<dynamic> transformedTasks = _model.csv.map((item) {
+                                                                              final rawMap = item as Map<String, dynamic>;
+                                                                              final tarefaId = rawMap['tarefa_id'] ?? 0;
+                                                                              final qtdTarefas = double.tryParse(rawMap['qtd_tarefas']?.toString() ?? '1') ?? 1;
+                                                                              
+                                                                              return {
+                                                                                'tasks_template_id': tarefaId,
+                                                                                'quantity': qtdTarefas,
+                                                                                'info_tarefas_manuais': {
+                                                                                  'description': rawMap[functions.returnNomeHeaders(FFAppState().headersSet.toList(), 0)] ?? '',
+                                                                                  'start_date': rawMap[functions.returnNomeHeaders(FFAppState().headersSet.toList(), 1)] ?? '',
+                                                                                  'end_date': rawMap[functions.returnNomeHeaders(FFAppState().headersSet.toList(), 2)] ?? '',
+                                                                                  'weight': double.tryParse(rawMap['peso']?.toString() ?? '0') ?? 0,
+                                                                                  'unity_id': rawMap['unity_id'] ?? 0,
+                                                                                  'quantity': double.tryParse(rawMap['quantidade']?.toString() ?? '0') ?? 0,
+                                                                                  'discipline_id': rawMap['discipline_id'] ?? 0,
+                                                                                  'equipaments_types_id': rawMap['equipaments_types_id'] ?? 0,
+                                                                                  'task_quantity': qtdTarefas, // Repeated as per user example structure
+                                                                                }
+                                                                              };
+                                                                            }).toList();
+
+                                                                            _model.apiResultImport = await ProjectsGroup.importCronogramaCall.call(
+                                                                              bearerAuth: FFAppState().token,
+                                                                              projectsId: FFAppState().projectsInfo.id,
+                                                                              tasksJson: transformedTasks,
+                                                                            );
+
+                                                                            _shouldSetState = true;
+                                                                            if ((_model.apiResultImport?.succeeded ?? true)) {
+                                                                              context.pushNamed(
+                                                                                'BacklogTarefas',
+                                                                                extra: <String, dynamic>{
+                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                    hasTransition: true,
+                                                                                    transitionType: PageTransitionType.fade,
+                                                                                    duration: Duration(milliseconds: 0),
+                                                                                  ),
+                                                                                },
+                                                                              );
+                                                                            } else {
+                                                                              await showDialog(
+                                                                                context: context,
+                                                                                builder: (dialogContext) {
+                                                                                  return Dialog(
+                                                                                    elevation: 0,
+                                                                                    insetPadding: EdgeInsets.zero,
+                                                                                    backgroundColor: Colors.transparent,
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0)
+                                                                                        .resolve(Directionality.of(context)),
+                                                                                    child: GestureDetector(
+                                                                                      onTap: () {
+                                                                                        FocusScope.of(dialogContext).unfocus();
+                                                                                        FocusManager.instance.primaryFocus?.unfocus();
+                                                                                      },
+                                                                                      child: ModalInfoWidget(
+                                                                                        title: 'Erro!',
+                                                                                        description: getJsonField(
+                                                                                          (_model.apiResultImport?.jsonBody ?? ''),
+                                                                                          r'''$.message''',
+                                                                                        ).toString(),
+                                                                                      ),
+                                                                                    ),
+                                                                                  );
+                                                                                },
+                                                                              );
+                                                                            }
+
+                                                                            if (_shouldSetState) safeSetState(() {});
+                                                                          },
                                                                         text: FFLocalizations.of(context)
                                                                             .getText(
                                                                           '7tpdl66z' /* Importar tarefas */,

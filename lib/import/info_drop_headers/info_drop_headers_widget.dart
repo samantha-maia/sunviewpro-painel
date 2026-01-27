@@ -62,19 +62,27 @@ class _InfoDropHeadersWidgetState extends State<InfoDropHeadersWidget> {
         hoverColor: Colors.transparent,
         highlightColor: Colors.transparent,
         onTap: () async {
+          if (functions.checkIsHeaderUsedElsewhere(FFAppState().headersSet.toList(),
+              widget!.varText!, widget!.sequencia!)) {
+            return; // Bloqueia seleção duplicada
+          }
           if (functions.checkVarNameTaksCopy(
               FFAppState().headersSet.toList(), widget!.sequencia)) {
-            FFAppState().updateHeadersSetAtIndex(
-              widget!.sequencia!,
-              (e) => e..nome = widget!.varText,
-            );
+            FFAppState().update(() {
+              FFAppState().updateHeadersSetAtIndex(
+                widget!.sequencia!,
+                (e) => e..nome = widget!.varText,
+              );
+            });
             safeSetState(() {});
             Navigator.pop(context);
           } else {
-            FFAppState().addToHeadersSet(HeadersStruct(
-              nome: widget!.varText,
-              sequencia: widget!.sequencia,
-            ));
+            FFAppState().update(() {
+              FFAppState().addToHeadersSet(HeadersStruct(
+                nome: widget!.varText,
+                sequencia: widget!.sequencia,
+              ));
+            });
             safeSetState(() {});
             Navigator.pop(context);
           }
@@ -97,15 +105,25 @@ class _InfoDropHeadersWidgetState extends State<InfoDropHeadersWidget> {
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: functions.checkVarNameTaks(
-                            FFAppState().headersSet.toList(), widget!.varText!)
+                    color: functions.checkIsHeaderUsedElsewhere(
+                            FFAppState().headersSet.toList(),
+                            widget!.varText!,
+                            widget!.sequencia!)
                         ? FlutterFlowTheme.of(context).secondaryText
-                        : FlutterFlowTheme.of(context).primaryText,
+                        : (functions.checkVarNameTaks(
+                                FFAppState().headersSet.toList(),
+                                widget!.varText!)
+                            ? FlutterFlowTheme.of(context).primary
+                            : FlutterFlowTheme.of(context).primaryText),
                     letterSpacing: 0.0,
-                    fontWeight:
-                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    decoration: functions.checkIsHeaderUsedElsewhere(
+                            FFAppState().headersSet.toList(),
+                            widget!.varText!,
+                            widget!.sequencia!)
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none,
                   ),
             ),
           ),

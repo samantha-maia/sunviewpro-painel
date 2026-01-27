@@ -20,10 +20,44 @@ class CsvCompModel extends FlutterFlowModel<CsvCompWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue2;
   FormFieldController<String>? dropDownValueController2;
+  // State field(s) for Equipament DropDown.
+  int? equipamentValue;
+  FormFieldController<int>? equipamentValueController;
+  // State field(s) for TextField widget.
+  FocusNode? pesoFocusNode;
+  TextEditingController? pesoTextController;
+  String? Function(BuildContext, String?)? pesoTextControllerValidator;
+  // State field(s) for DropDown widget.
+  String? unidadeValue;
+  FormFieldController<String>? unidadeValueController;
+  // State field(s) for TextField widget.
+  FocusNode? quantidadeFocusNode;
+  TextEditingController? quantidadeTextController;
+  String? Function(BuildContext, String?)? quantidadeTextControllerValidator;
+  // State field(s) for DropDown widget.
+  String? disciplinaValue;
+  FormFieldController<String>? disciplinaValueController;
+  // State field(s) for TextField widget.
+  FocusNode? qtdTarefasFocusNode;
+  TextEditingController? qtdTarefasTextController;
+  String? Function(BuildContext, String?)? qtdTarefasTextControllerValidator;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    pesoTextController = TextEditingController();
+    quantidadeTextController = TextEditingController();
+    qtdTarefasTextController = TextEditingController(text: '1');
+  }
 
   @override
-  void dispose() {}
+  void dispose() {
+    pesoFocusNode?.dispose();
+    pesoTextController?.dispose();
+
+    quantidadeFocusNode?.dispose();
+    quantidadeTextController?.dispose();
+
+    qtdTarefasFocusNode?.dispose();
+    qtdTarefasTextController?.dispose();
+  }
 }

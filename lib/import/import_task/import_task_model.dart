@@ -41,6 +41,13 @@ class ImportTaskModel extends FlutterFlowModel<ImportTaskWidget> {
 
   // Stores action output result for [Backend Call - API (tarefas sem page e perpage)] action in import_task widget.
   ApiCallResponse? allTasks;
+  // Stores action output result for [Backend Call - API (Equipments)]
+  ApiCallResponse? allEquipments;
+  // Stores action output result for [Backend Call - API (Units)]
+  ApiCallResponse? allUnits;
+  // Stores action output result for [Backend Call - API (Discipline)]
+  ApiCallResponse? allDisciplines;
+  ApiCallResponse? apiResultImport;
   // Model for navBar component.
   late NavBarModel navBarModel;
   // Stores action output result for [Custom Action - csvJson] action in Button widget.

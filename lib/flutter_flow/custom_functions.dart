@@ -474,3 +474,16 @@ String returnNomeHeaders(
   }
   return '';
 }
+
+bool checkIsHeaderUsedElsewhere(
+  List<HeadersStruct> headers,
+  String varText,
+  int currentSequencia,
+) {
+  for (var h in headers) {
+    if (h.nome == varText && h.sequencia != currentSequencia) {
+      return true;
+    }
+  }
+  return false;
+}
