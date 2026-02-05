@@ -18,6 +18,12 @@ class FFAppState extends ChangeNotifier {
     _instance = FFAppState._internal();
   }
 
+  Future<void> clearAllState() async {
+    await prefs.clear();
+    reset();
+    await FFAppState().initializePersistedState();
+  }
+
   Future initializePersistedState() async {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
