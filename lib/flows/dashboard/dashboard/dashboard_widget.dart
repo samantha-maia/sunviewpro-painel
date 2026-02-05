@@ -48,6 +48,44 @@ class _DashboardWidgetState extends State<DashboardWidget> {
 
       if ((_model.aPiTokenAuth?.succeeded ?? true)) {
         FFAppState().isMap = false;
+        FFAppState().infoUser = VarInfoUserStruct(
+          id: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.id(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          name: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.name(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          email: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.email(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          phone: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.phone(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          usersPermissionsId: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.permissionsId(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          usersSystemAccessId: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.systemId(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          usersRolesId: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.rolesId(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          usersControlSystemId: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.controlId(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          url: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.img(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          sprintIdAtiva: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.sprintID(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          companyId: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.companyID(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+          plan: AuthenticationGroup.getTheRecordBelongingToTheAuthenticationTokenCall.paymentID(
+            (_model.aPiTokenAuth?.jsonBody ?? ''),
+          ),
+        );
         FFAppState().update(() {});
         if ((AuthenticationGroup
                     .getTheRecordBelongingToTheAuthenticationTokenCall
