@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'dart:typed_data';
 import '../schema/structs/index.dart';
 
@@ -17,7 +17,6 @@ class TrackersMapGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:6L6t8cws';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static QueryAllFieldsRecordsCall queryAllFieldsRecordsCall =
       QueryAllFieldsRecordsCall();
@@ -79,7 +78,6 @@ class QueryAllFieldsRecordsCall {
       apiUrl: '${baseUrl}/fields',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -131,7 +129,6 @@ class QueryAllSectionsRecordsCall {
       apiUrl: '${baseUrl}/sections',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -178,7 +175,6 @@ class AddRowsTrackersRecordCall {
       apiUrl: '${baseUrl}/rows_trackers',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -213,7 +209,6 @@ class AddRowsRecordCall {
       apiUrl: '${baseUrl}/rows',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -241,7 +236,6 @@ class DeleteRowsRecordCall {
       apiUrl: '${baseUrl}/rows/${rowsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -267,7 +261,6 @@ class DeleteRowsTrackersStatusesRecordCall {
       apiUrl: '${baseUrl}/rows_trackers_statuses/${rowsTrackersStatusesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -293,7 +286,6 @@ class GetRowsTrackersRecordCall {
       apiUrl: '${baseUrl}/rows_trackers/${rowsTrackersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -326,7 +318,6 @@ class EditFieldsRecordCall {
       apiUrl: '${baseUrl}/fields/${fieldsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -354,7 +345,6 @@ class GetRowsRecordCall {
       apiUrl: '${baseUrl}/rows/${rowsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -380,7 +370,6 @@ class GetRowsTrackersStatusesRecordCall {
       apiUrl: '${baseUrl}/rows_trackers_statuses/${rowsTrackersStatusesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -413,7 +402,6 @@ class EditSectionsRecordCall {
       apiUrl: '${baseUrl}/sections/${sectionsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -447,7 +435,6 @@ class AddSectionsRecordCall {
       apiUrl: '${baseUrl}/sections',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -482,7 +469,6 @@ class EditRowsRecordCall {
       apiUrl: '${baseUrl}/rows/${rowsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -516,7 +502,6 @@ class EditRowsTrackersStatusesRecordCall {
       apiUrl: '${baseUrl}/rows_trackers_statuses/${rowsTrackersStatusesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -544,7 +529,6 @@ class GetFieldsRecordCall {
       apiUrl: '${baseUrl}/fields/${fieldsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -598,7 +582,6 @@ class EditRowsTrackersRecordCall {
       apiUrl: '${baseUrl}/rows_trackers/${rowsTrackersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -632,7 +615,6 @@ class AddFieldsRecordCall {
       apiUrl: '${baseUrl}/fields',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -659,7 +641,6 @@ class QueryAllRowsTrackersRecordsCall {
       apiUrl: '${baseUrl}/rows_trackers',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -684,7 +665,6 @@ class QueryAllRowsTrackersStatusesRecordsCall {
       apiUrl: '${baseUrl}/rows_trackers_statuses',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -710,7 +690,6 @@ class GetSectionsRecordCall {
       apiUrl: '${baseUrl}/sections/${sectionsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -741,7 +720,6 @@ class AddRowsTrackersStatusesRecordCall {
       apiUrl: '${baseUrl}/rows_trackers_statuses',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -782,7 +760,6 @@ class QueryAllRowsRecordsCall {
       apiUrl: '${baseUrl}/rows_list',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -830,7 +807,6 @@ class DeleteRowsTrackersRecordCall {
       apiUrl: '${baseUrl}/rows_trackers/${rowsTrackersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -861,7 +837,6 @@ class DeleteFieldsRecordCall {
       apiUrl: '${baseUrl}/fields/${fieldsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -893,7 +868,6 @@ class DuplicateSectionCall {
       apiUrl: '${baseUrl}/section_duplicate',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -922,7 +896,6 @@ class DeleteSectionsRecordCall {
       apiUrl: '${baseUrl}/sections/${sectionsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -951,7 +924,6 @@ class DeleteRowCall {
       apiUrl: '${baseUrl}/rows_trackers_map',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -980,7 +952,6 @@ class ImportMapTrackersCall {
       apiUrl: '${baseUrl}/sections_import',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -1012,7 +983,6 @@ class ReportsGroup {
       'https://x4t7-ilri-ywed.n7d.xano.io/api:6JnM9cvj';
   static Map<String, String> headers = {
     'Authorization': 'Bearer [token]',
-    'X-data-source': 'dev',
   };
   static QueryAllDailyReportRecordsCall queryAllDailyReportRecordsCall =
       QueryAllDailyReportRecordsCall();
@@ -1054,7 +1024,6 @@ class QueryAllDailyReportRecordsCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'projects_id': projectsId,
@@ -1102,7 +1071,6 @@ class DailyReportDateCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'projects_id': projectsId,
@@ -1138,7 +1106,6 @@ class DeleteDailyReportRecordCall {
       callType: ApiCallType.DELETE,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -1175,7 +1142,6 @@ class AddDailyReportRecordCall {
       callType: ApiCallType.POST,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1206,7 +1172,6 @@ class BurndownCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'sprints_id': sprintsId,
@@ -1284,7 +1249,6 @@ class ScheduleoCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'projects_id': projectsId,
@@ -1327,7 +1291,6 @@ class EditDailyReportRecordCall {
       callType: ApiCallType.PATCH,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1360,7 +1323,6 @@ class GetDailyReportRecordCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'page': page,
@@ -1398,7 +1360,6 @@ class GetDailyreportRecordPdfCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -1433,7 +1394,6 @@ class DashboardCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'initial_date': initialDate,
@@ -1466,7 +1426,6 @@ class GetInformeDiarioCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'projects_id': projectsId,
@@ -1526,7 +1485,6 @@ class NovoGetInformeDiarioCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'projects_id': projectsId,
@@ -1550,7 +1508,6 @@ class UserGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:E6YADvqY';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static GetUserCall getUserCall = GetUserCall();
   static EditUsersPermissionsRecordCall editUsersPermissionsRecordCall =
@@ -1626,7 +1583,6 @@ class GetUserCall {
       apiUrl: '${baseUrl}/users/${usersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -1720,7 +1676,6 @@ class EditUsersPermissionsRecordCall {
       apiUrl: '${baseUrl}/users_permissions/${usersPermissionsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -1754,7 +1709,6 @@ class ChangePasswordCall {
       apiUrl: '${baseUrl}/change_password',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -1797,7 +1751,6 @@ class AddUsersPermissionsRecordCall {
       apiUrl: '${baseUrl}/users_permissions',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -1825,7 +1778,6 @@ class DeleteUsersSystemAccessRecordCall {
       apiUrl: '${baseUrl}/users_system_access/${usersSystemAccessId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -1850,7 +1802,6 @@ class QueryAllUsersPermissionsRecordsCall {
       apiUrl: '${baseUrl}/users_permissions',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -1891,7 +1842,6 @@ class UsersZeroCall {
       apiUrl: '${baseUrl}/users_0',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -1958,7 +1908,6 @@ class APIQueBuscaUsuariosQuePodemSerLideresDeEquipeCall {
       apiUrl: '${baseUrl}/users_leaders_0',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2014,7 +1963,6 @@ class EditUsersControlSystemRecordCall {
       apiUrl: '${baseUrl}/users_control_system/${usersControlSystemId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2042,7 +1990,6 @@ class GetUsersSystemAccessRecordCall {
       apiUrl: '${baseUrl}/users_system_access/${usersSystemAccessId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2068,7 +2015,6 @@ class GetUsersControlSystemRecordCall {
       apiUrl: '${baseUrl}/users_control_system/${usersControlSystemId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2094,7 +2040,6 @@ class DeleteUsersPermissionsRecordCall {
       apiUrl: '${baseUrl}/users_permissions/${usersPermissionsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2120,7 +2065,6 @@ class DeleteUsersRolesRecordCall {
       apiUrl: '${baseUrl}/users_roles/${usersRolesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2145,7 +2089,6 @@ class QueryAllUsersRolesRecordsCall {
       apiUrl: '${baseUrl}/users_roles',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2171,7 +2114,6 @@ class DeleteUsersControlSystemRecordCall {
       apiUrl: '${baseUrl}/users_control_system/${usersControlSystemId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2197,7 +2139,6 @@ class GetUsersRolesRecordCall {
       apiUrl: '${baseUrl}/users_roles/${usersRolesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2222,7 +2163,6 @@ class QueryAllUsersSystemAccessRecordsCall {
       apiUrl: '${baseUrl}/users_system_access',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2261,7 +2201,6 @@ class QuerryAllUsersRecordCall {
       apiUrl: '${baseUrl}/users_list',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2314,7 +2253,6 @@ class QueryAllUsersControlSystemRecordsCall {
       apiUrl: '${baseUrl}/users_control_system',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2340,7 +2278,6 @@ class DeleteUserCall {
       apiUrl: '${baseUrl}/users/${usersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2377,7 +2314,6 @@ class AddUsersCall {
       apiUrl: '${baseUrl}/users',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -2429,7 +2365,6 @@ class PatchUsersCall {
       apiUrl: '${baseUrl}/users/${usersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -2467,7 +2402,6 @@ class GetUsersPermissionsRecordCall {
       apiUrl: '${baseUrl}/users_permissions/${usersPermissionsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2504,7 +2438,6 @@ class EditUsersSystemAccessRecordCall {
       apiUrl: '${baseUrl}/users_system_access/${usersSystemAccessId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2537,7 +2470,6 @@ class AddUsersControlSystemRecordCall {
       apiUrl: '${baseUrl}/users_control_system',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2570,7 +2502,6 @@ class AddUsersSystemAccessRecordCall {
       apiUrl: '${baseUrl}/users_system_access',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2603,7 +2534,6 @@ class AddUsersRolesRecordCall {
       apiUrl: '${baseUrl}/users_roles',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2637,7 +2567,6 @@ class EditUsersRolesRecordCall {
       apiUrl: '${baseUrl}/users_roles/${usersRolesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -2674,7 +2603,6 @@ class GetUserExportCall {
       apiUrl: '${baseUrl}/users_list_clone_0',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -2703,7 +2631,6 @@ class ImportUsersCsvCall {
       apiUrl: '${baseUrl}/import_user',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -2733,7 +2660,6 @@ class AllUserDropCall {
       apiUrl: '${baseUrl}/query_all_users',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -2807,7 +2733,6 @@ class CreatCompanyCall {
       apiUrl: '${baseUrl}/company',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -2860,7 +2785,6 @@ class EditCompanyCall {
       apiUrl: '${baseUrl}/company/${companyId}',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -2888,7 +2812,6 @@ class GetCompanyCall {
       apiUrl: '${baseUrl}/company/${companyId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -2959,7 +2882,6 @@ class TasksGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:tYJj64-Q';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static EditTasksRecordCall editTasksRecordCall = EditTasksRecordCall();
   static QueryAllTasksRecordsCall queryAllTasksRecordsCall =
@@ -3017,7 +2939,6 @@ class EditTasksRecordCall {
       apiUrl: '${baseUrl}/tasks/${tasksId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3058,7 +2979,6 @@ class QueryAllTasksRecordsCall {
       apiUrl: '${baseUrl}/tasks_list',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3117,7 +3037,6 @@ class QueryAllIdsTasksCall {
       apiUrl: '${baseUrl}/tasks_list_clone0',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3169,7 +3088,6 @@ class AddTasksRecordCall {
       apiUrl: '${baseUrl}/tasks',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3197,7 +3115,6 @@ class GetTasksRecordCall {
       apiUrl: '${baseUrl}/tasks/${tasksId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3222,7 +3139,6 @@ class QueryAllTasksSemPaginacaoCall {
       apiUrl: '${baseUrl}/tasks',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3272,7 +3188,6 @@ class EditTasksPrioritiesRecordCall {
       apiUrl: '${baseUrl}/tasks_priorities/${tasksPrioritiesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3300,7 +3215,6 @@ class DeleteTasksPrioritiesRecordCall {
       apiUrl: '${baseUrl}/tasks_priorities/${tasksPrioritiesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3326,7 +3240,6 @@ class GetTasksPrioritiesRecordCall {
       apiUrl: '${baseUrl}/tasks_priorities/${tasksPrioritiesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3357,7 +3270,6 @@ class AddTasksPrioritiesRecordCall {
       apiUrl: '${baseUrl}/tasks_priorities',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3384,7 +3296,6 @@ class QueryAllTasksPrioritiesRecordsCall {
       apiUrl: '${baseUrl}/tasks_priorities',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3410,7 +3321,6 @@ class DeactivateTaskCall {
       apiUrl: '${baseUrl}/tasks/${tasksId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3435,7 +3345,6 @@ class GetUnityCall {
       apiUrl: '${baseUrl}/unity',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -3488,7 +3397,6 @@ class QueryAllCommentsBacklogsCall {
       apiUrl: '${baseUrl}/comment_backlogs',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -3516,7 +3424,6 @@ class QueryAllCommentSubtasksCall {
       apiUrl: '${baseUrl}/comment_subtasks',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -3543,7 +3450,6 @@ class DisciplineCall {
       apiUrl: '${baseUrl}/discipline',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -3593,7 +3499,6 @@ class TarefasSemPageEPerpageCall {
       apiUrl: '${baseUrl}/all_tasks_template',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -3634,7 +3539,6 @@ class TrackersGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:T9-pCDOs';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static GetTrackersTypesRecordCall getTrackersTypesRecordCall =
       GetTrackersTypesRecordCall();
@@ -3668,7 +3572,6 @@ class GetTrackersTypesRecordCall {
       apiUrl: '${baseUrl}/trackers_types/${trackersTypesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3709,7 +3612,6 @@ class AddTrackersRecordCall {
       apiUrl: '${baseUrl}/trackers',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3737,7 +3639,6 @@ class DeleteTrackersRecordCall {
       apiUrl: '${baseUrl}/trackers/${trackersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3769,7 +3670,6 @@ class AddTrackersTypesRecordCall {
       apiUrl: '${baseUrl}/trackers_types',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3797,7 +3697,6 @@ class GetTrackersRecordCall {
       apiUrl: '${baseUrl}/trackers/${trackersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3839,7 +3738,6 @@ class EditTrackersRecordCall {
       apiUrl: '${baseUrl}/trackers/${trackersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -3867,7 +3765,6 @@ class QueryAllTrackersTypesRecordsCall {
       apiUrl: '${baseUrl}/trackers_types',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -3922,7 +3819,6 @@ class QueryAllTrackersRecordsCall {
       apiUrl: '${baseUrl}/trackers',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -3977,7 +3873,6 @@ class EditTrackersTypesRecordCall {
       apiUrl: '${baseUrl}/trackers_types/${trackersTypesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4005,7 +3900,6 @@ class DeleteTrackersTypesRecordCall {
       apiUrl: '${baseUrl}/trackers_types/${trackersTypesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4027,7 +3921,6 @@ class SprintsGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:RIFrFtp1';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static GetSprintsRecordCall getSprintsRecordCall = GetSprintsRecordCall();
   static GetSprintsTasksStatusRecordCall getSprintsTasksStatusRecordCall =
@@ -4087,7 +3980,6 @@ class GetSprintsRecordCall {
       apiUrl: '${baseUrl}/sprints/${sprintsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4113,7 +4005,6 @@ class GetSprintsTasksStatusRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks_statuses/${sprintsTasksStatusesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -4143,7 +4034,6 @@ class QueryAllSprintsRecordsCall {
       apiUrl: '${baseUrl}/sprints',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -4195,7 +4085,6 @@ class EditSprintsStatusesRecordCall {
       apiUrl: '${baseUrl}/sprints_statuses/${sprintsStatusesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4223,7 +4112,6 @@ class GetSprintsTasksRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks/${sprintsTasksId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4249,7 +4137,6 @@ class QueryAllSprintsTasksStatusRecordsCall {
       apiUrl: '${baseUrl}/sprints_tasks_statuses',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4274,7 +4161,6 @@ class QueryAllSprintsStatusesRecordsCall {
       apiUrl: '${baseUrl}/sprints_statuses',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4312,7 +4198,6 @@ class EditSprintsTasksRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks/${sprintsTasksId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4356,7 +4241,6 @@ class AddSprintsRecordCall {
       apiUrl: '${baseUrl}/sprints',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4397,7 +4281,6 @@ class EditStatusTaskCall {
       apiUrl: '${baseUrl}/update_sprint_task_status',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4434,7 +4317,6 @@ class EditStatusTaskLISTACall {
       apiUrl: '${baseUrl}/update_lista_sprint_task_status',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4462,7 +4344,6 @@ class DeleteSprintsTasksRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks/${sprintsTasksId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4488,7 +4369,6 @@ class DeleteSprintsRecordCall {
       apiUrl: '${baseUrl}/sprints/${sprintsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4531,7 +4411,6 @@ class EditSprintsRecordCall {
       apiUrl: '${baseUrl}/sprints/${sprintsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4601,7 +4480,6 @@ class QueryAllSprintsTasksRecordsCall {
       apiUrl: '${baseUrl}/sprints_tasks_painel',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4739,7 +4617,6 @@ class GetSprintsStatusesRecordCall {
       apiUrl: '${baseUrl}/sprints_statuses/${sprintsStatusesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4765,7 +4642,6 @@ class DeleteSprintsStatusesRecordCall {
       apiUrl: '${baseUrl}/sprints_statuses/${sprintsStatusesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4796,7 +4672,6 @@ class AddSprintsStatusesRecordCall {
       apiUrl: '${baseUrl}/sprints_statuses',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4829,7 +4704,6 @@ class AddSprintsTasksStatusRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks_statuses',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4869,7 +4743,6 @@ class AddSprintsTasksRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4897,7 +4770,6 @@ class DeleteSprintsTasksStatusRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks_statuses/${sprintsTasksStatusesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4930,7 +4802,6 @@ class EditSprintsTasksStatusRecordCall {
       apiUrl: '${baseUrl}/sprints_tasks_statuses/${sprintsTasksStatusesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -4958,7 +4829,6 @@ class SprintsGraficoFiltroCall {
       apiUrl: '${baseUrl}/sprints_grafico_filter',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -5005,7 +4875,6 @@ class CountsSubtasksCall {
       apiUrl: '${baseUrl}/counts_subtasks',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -5047,7 +4916,6 @@ class ModuleGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:nUPQqKD8';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static AddModulesTypesRecordCall addModulesTypesRecordCall =
       AddModulesTypesRecordCall();
@@ -5096,7 +4964,6 @@ class AddModulesTypesRecordCall {
       apiUrl: '${baseUrl}/modules_types',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5132,7 +4999,6 @@ class QueryAllModulesTrackersRecordsCall {
       apiUrl: '${baseUrl}/modules_trackers',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5158,7 +5024,6 @@ class DeleteModulesTypesRecordCall {
       apiUrl: '${baseUrl}/modules_types/${modulesTypesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5211,7 +5076,6 @@ class EditModulesRecordCall {
       apiUrl: '${baseUrl}/modules/${modulesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5261,7 +5125,6 @@ class AddModulesRecordCall {
       apiUrl: '${baseUrl}/modules',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5296,7 +5159,6 @@ class EditModulesTrackersRecordCall {
       apiUrl: '${baseUrl}/modules_trackers/${modulesTrackersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5324,7 +5186,6 @@ class DeleteModulesTrackersRecordCall {
       apiUrl: '${baseUrl}/modules_trackers/${modulesTrackersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5350,7 +5211,6 @@ class GetModulesTrackersRecordCall {
       apiUrl: '${baseUrl}/modules_trackers/${modulesTrackersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5382,7 +5242,6 @@ class AddModulesTrackersRecordCall {
       apiUrl: '${baseUrl}/modules_trackers',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5410,7 +5269,6 @@ class GetModulesRecordCall {
       apiUrl: '${baseUrl}/modules/${modulesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5438,7 +5296,6 @@ class QueryAllModulesRecordsCall {
       apiUrl: '${baseUrl}/modules',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -5494,7 +5351,6 @@ class GetModulesTypesRecordCall {
       apiUrl: '${baseUrl}/modules_types/${modulesTypesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5520,7 +5376,6 @@ class DeleteModulesRecordCall {
       apiUrl: '${baseUrl}/modules/${modulesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5552,7 +5407,6 @@ class EditModulesTypesRecordCall {
       apiUrl: '${baseUrl}/modules_types/${modulesTypesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5580,7 +5434,6 @@ class QueryAllModulesTypesRecordsCall {
       apiUrl: '${baseUrl}/modules_types',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -5610,7 +5463,6 @@ class SendgridValidationGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:KsPbEemV';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static ThisEndpointIsUsedToValidateThatSendgridIsWorkingCall
       thisEndpointIsUsedToValidateThatSendgridIsWorkingCall =
@@ -5641,7 +5493,6 @@ class ThisEndpointIsUsedToValidateThatSendgridIsWorkingCall {
       apiUrl: '${baseUrl}/sendgrid/validate',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -5673,7 +5524,6 @@ class AcaoDeValidarCodigoParaAAlteracaoDeSenhaCall {
       apiUrl: '${baseUrl}/sendgrid/validate/code',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -5706,7 +5556,6 @@ class ApiParaResetarASenhaDoUsuarioComUmaNovaSenhaCall {
       apiUrl: '${baseUrl}/sendgrid/reset/pass',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -5736,7 +5585,6 @@ class ApiParaMandarOCodigoDeRecuperacaoParaOEmailCall {
       apiUrl: '${baseUrl}/sendgrid/send/code',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -5759,7 +5607,6 @@ class ProjectsGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:2--ZlFfr';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static EditTeamsLeadersRecordCall editTeamsLeadersRecordCall =
       EditTeamsLeadersRecordCall();
@@ -5881,7 +5728,6 @@ class EditTeamsLeadersRecordCall {
       apiUrl: '${baseUrl}/teams_leaders/${teamsLeadersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5912,7 +5758,6 @@ class QueryToGetAllLidersFromATeamCall {
       apiUrl: '${baseUrl}/teams_leaders/all/${teamsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -5948,7 +5793,6 @@ class DeleteTeamsMembersRecordCall {
       apiUrl: '${baseUrl}/teams_members/${teamsMembersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -5981,7 +5825,6 @@ class AddProjectsBacklogsRecordCall {
       apiUrl: '${baseUrl}/projects_backlogs',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6019,7 +5862,6 @@ class AddProjectsStatusesRecordCall {
       apiUrl: '${baseUrl}/projects_statuses',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6061,7 +5903,6 @@ class ProjectsBacklogsBulkCall {
       apiUrl: '${baseUrl}/projects_backlogs/bulk',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6095,7 +5936,6 @@ class EditProjectsWorksSituationsRecordCall {
           '${baseUrl}/projects_works_situations/${projectsWorksSituationsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -6136,7 +5976,6 @@ class QueryAllTeamsRecordsCall {
       apiUrl: '${baseUrl}/teams_list/all/${projectsId}',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6186,7 +6025,6 @@ class GetProjectsWorksSituationsRecordCall {
           '${baseUrl}/projects_works_situations/${projectsWorksSituationsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -6217,7 +6055,6 @@ class EditProjectsStatusesRecordCall {
       apiUrl: '${baseUrl}/projects_statuses/${projectsStatusesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6254,7 +6091,6 @@ class AddTeamsRecordCall {
       apiUrl: '${baseUrl}/teams',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6287,7 +6123,6 @@ class GetProjectsStatusesRecordCall {
       apiUrl: '${baseUrl}/projects_statuses/${projectsStatusesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6313,7 +6148,6 @@ class DeleteProjectsBacklogsRecordCall {
       apiUrl: '${baseUrl}/projects_backlogs/${projectsBacklogsId}',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6340,7 +6174,6 @@ class DeleteTeamsLeadersRecordCall {
       apiUrl: '${baseUrl}/teams_leaders/${teamsLeadersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6397,7 +6230,6 @@ class EditProjectsRecordCall {
       apiUrl: '${baseUrl}/projects/${projectsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -6482,7 +6314,6 @@ class GetProjectsBacklogsRecordCall {
       apiUrl: '${baseUrl}/projects_backlogs_list/${projectsId}',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6562,7 +6393,6 @@ class QueryAllIdsProjectsBacklogsRecordCall {
       apiUrl: '${baseUrl}/projects_backlogs_list/${projectsId}/clone_0',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6599,7 +6429,6 @@ class EquipamentsTypeCall {
       apiUrl: '${baseUrl}/equipaments_types',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6644,7 +6473,6 @@ class DeleteProjectsUsersRecordCall {
       apiUrl: '${baseUrl}/projects_users/${projectsUsersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6677,7 +6505,6 @@ class EditProjectsUsersRecordCall {
       apiUrl: '${baseUrl}/projects_users/${projectsUsersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6705,7 +6532,6 @@ class DeleteProjectsRecordCall {
       apiUrl: '${baseUrl}/projects/${projectsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6740,7 +6566,6 @@ class EditaLiderDoTimeCall {
       apiUrl: '${baseUrl}/edit_teams_leaders',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6768,7 +6593,6 @@ class DeleteProjectsWorksSituationsRecordCall {
           '${baseUrl}/projects_works_situations/${projectsWorksSituationsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -6796,7 +6620,6 @@ class QueryAllTeamsLeadersRecordsCall {
       apiUrl: '${baseUrl}/teams_leaders',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -6857,7 +6680,6 @@ class GetTeamsMembersRecordCall {
       apiUrl: '${baseUrl}/teams_members/${teamsMembersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6882,7 +6704,6 @@ class QueryAllProjectsStatusesRecordsCall {
       apiUrl: '${baseUrl}/projects_statuses',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6912,7 +6733,6 @@ class EditTeamsRecordCall {
       apiUrl: '${baseUrl}/teams/${teamsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6947,7 +6767,6 @@ class EditTeamsMembersRecordCall {
       apiUrl: '${baseUrl}/teams_members/${teamsMembersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -6978,7 +6797,6 @@ class QueryAllProjectsRecordsCall {
       apiUrl: '${baseUrl}/projects',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -7039,7 +6857,6 @@ class AddTeamsLeadersRecordCall {
       apiUrl: '${baseUrl}/teams_leaders',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7097,7 +6914,6 @@ class AddProjectsRecordCall {
       apiUrl: '${baseUrl}/projects',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -7161,7 +6977,6 @@ class GetTeamsLeadersRecordCall {
       apiUrl: '${baseUrl}/teams_leaders/${teamsLeadersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7187,7 +7002,6 @@ class GetTeamsRecordCall {
       apiUrl: '${baseUrl}/teams',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -7240,7 +7054,6 @@ class AddTeamsMembersRecordCall {
       apiUrl: '${baseUrl}/teams_members',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7268,7 +7081,6 @@ class GetProjectsRecordCall {
       apiUrl: '${baseUrl}/projects/${projectsId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7300,7 +7112,6 @@ class AddProjectsUsersRecordCall {
       apiUrl: '${baseUrl}/projects_users',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7327,7 +7138,6 @@ class QueryAllProjectsUsersRecordsCall {
       apiUrl: '${baseUrl}/projects_users',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7353,7 +7163,6 @@ class DeleteProjectsStatusesRecordCall {
       apiUrl: '${baseUrl}/projects_statuses/${projectsStatusesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7382,7 +7191,6 @@ class AddProjectsWorksSituationsRecordCall {
       apiUrl: '${baseUrl}/projects_works_situations',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -7411,7 +7219,6 @@ class QueryAllTeamsMembersRecordsCall {
       apiUrl: '${baseUrl}/teams_members',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -7441,7 +7248,6 @@ class GetProjectsUsersRecordCall {
       apiUrl: '${baseUrl}/projects_users/${projectsUsersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7467,7 +7273,6 @@ class DeleteTeamsRecordCall {
       apiUrl: '${baseUrl}/teams/${teamsId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7509,7 +7314,6 @@ class FiltraOsCamposCall {
       apiUrl: '${baseUrl}/filters_project_backlog',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7557,7 +7361,6 @@ class GetAllProjectsBacklogsCall {
       apiUrl: '${baseUrl}/projects_backlogs',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7593,7 +7396,6 @@ class EditaUmMembroDoTimeCall {
       apiUrl: '${baseUrl}/edit_teams_member',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7618,7 +7420,6 @@ class QueryAllProjectsWorksSituationsRecordsCall {
       apiUrl: '${baseUrl}/projects_works_situations',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -7653,7 +7454,6 @@ class EditProjectsBacklogsRecordCall {
       apiUrl: '${baseUrl}/projects_backlogs/${projectsBacklogsId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7699,7 +7499,6 @@ class AddTasksBacklogManualCall {
       apiUrl: '${baseUrl}/projects_backlogs_manual',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -7728,7 +7527,6 @@ class CheckTaskBacklogCall {
       apiUrl: '${baseUrl}/projects_backlogs_list/${projectsId}/check_taks',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -7777,7 +7575,6 @@ class EditTaskBacklogCall {
       apiUrl: '${baseUrl}/projects_backlogs_list/${projectsBacklogsId}',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -7821,7 +7618,6 @@ class AddSubtasksCall {
       apiUrl: '${baseUrl}/subtasks',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -7860,7 +7656,6 @@ class EditSubtasksCall {
       apiUrl: '${baseUrl}/subtasks/${subtasksId}',
       callType: ApiCallType.PUT,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {},
@@ -7888,7 +7683,6 @@ class GetSubtasksCall {
       apiUrl: '${baseUrl}/subtasks',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${token}',
       },
       params: {
@@ -7912,7 +7706,6 @@ class ManufacturersGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:KxOV_SOi';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static AddManufacturersRecordCall addManufacturersRecordCall =
       AddManufacturersRecordCall();
@@ -7944,7 +7737,6 @@ class AddManufacturersRecordCall {
       apiUrl: '${baseUrl}/manufacturers',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -7987,7 +7779,6 @@ class EditManufacturersRecordCall {
       apiUrl: '${baseUrl}/manufacturers/${manufacturersId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8015,7 +7806,6 @@ class GetManufacturersRecordCall {
       apiUrl: '${baseUrl}/manufacturers/${manufacturersId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8041,7 +7831,6 @@ class DeleteManufacturersRecordCall {
       apiUrl: '${baseUrl}/manufacturers/${manufacturersId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8068,7 +7857,6 @@ class QueryAllManufacturersRecordsCall {
       apiUrl: '${baseUrl}/manufacturers',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -8099,7 +7887,6 @@ class StakesGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:fIuUi9AL';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static GetStakesStatusesRecordCall getStakesStatusesRecordCall =
       GetStakesStatusesRecordCall();
@@ -8144,7 +7931,6 @@ class GetStakesStatusesRecordCall {
       apiUrl: '${baseUrl}/stakes_statuses/${stakesStatusesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8170,7 +7956,6 @@ class QueryAllStakesTypesRecordsCall {
       apiUrl: '${baseUrl}/stakes_types',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -8197,7 +7982,6 @@ class GetStakesTypesRecordCall {
       apiUrl: '${baseUrl}/stakes_types/${stakesTypesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -8225,7 +8009,6 @@ class AddStakesTypesRecordCall {
       apiUrl: '${baseUrl}/stakes_types',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -8251,7 +8034,6 @@ class QueryAllStakesStatusesRecordsCall {
       apiUrl: '${baseUrl}/stakes_statuses',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8277,7 +8059,6 @@ class DeleteStakesStatusesRecordCall {
       apiUrl: '${baseUrl}/stakes_statuses/${stakesStatusesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8303,7 +8084,6 @@ class DeleteStakesRecordCall {
       apiUrl: '${baseUrl}/stakes/${stakesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8339,7 +8119,6 @@ class EditStakesRecordCall {
       apiUrl: '${baseUrl}/stakes/${stakesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8366,7 +8145,6 @@ class QueryAllStakesRecordsCall {
       apiUrl: '${baseUrl}/stakes',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8392,7 +8170,6 @@ class GetStakesRecordCall {
       apiUrl: '${baseUrl}/stakes/${stakesId}',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8427,7 +8204,6 @@ class AddStakesRecordCall {
       apiUrl: '${baseUrl}/stakes',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8454,7 +8230,6 @@ class DeleteStakesTypesRecordCall {
       apiUrl: '${baseUrl}/stakes_types/${stakesTypesId}',
       callType: ApiCallType.DELETE,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -8484,7 +8259,6 @@ class EditStakesTypesRecordCall {
       apiUrl: '${baseUrl}/stakes_types/${stakesTypesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -8511,7 +8285,6 @@ class GetEstacasDeUmTrackersCall {
       apiUrl: '${baseUrl}/stakes_tracker',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {
@@ -8544,7 +8317,6 @@ class AddStakesStatusesRecordCall {
       apiUrl: '${baseUrl}/stakes_statuses',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8578,7 +8350,6 @@ class EditStakesStatusesRecordCall {
       apiUrl: '${baseUrl}/stakes_statuses/${stakesStatusesId}',
       callType: ApiCallType.PATCH,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8602,7 +8373,6 @@ class AuthenticationGroup {
   static String getBaseUrl() =>
       'https://x4t7-ilri-ywed.n7d.xano.io/api:Hc67zbYj';
   static Map<String, String> headers = {
-    'X-data-source': 'dev',
   };
   static GetTheRecordBelongingToTheAuthenticationTokenCall
       getTheRecordBelongingToTheAuthenticationTokenCall =
@@ -8626,7 +8396,6 @@ class GetTheRecordBelongingToTheAuthenticationTokenCall {
       apiUrl: '${baseUrl}/auth/me',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -8706,7 +8475,6 @@ class LoginAndRetrieveAnAuthenticationTokenCall {
       apiUrl: '${baseUrl}/auth/login',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -8749,7 +8517,6 @@ class SignupAndRetrieveAnAuthenticationTokenCall {
       apiUrl: '${baseUrl}/auth/signup',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
       },
       params: {
         'name': name,
@@ -8793,7 +8560,6 @@ class AgenteIAGroup {
       'https://x4t7-ilri-ywed.n7d.xano.io/api:xsMxTEE1';
   static Map<String, String> headers = {
     'Authorization': 'Bearer [token]',
-    'X-data-source': 'dev',
   };
   static AgentTaskQueriesCall agentTaskQueriesCall = AgentTaskQueriesCall();
 }
@@ -8817,7 +8583,6 @@ class AgentTaskQueriesCall {
       callType: ApiCallType.POST,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -8848,7 +8613,6 @@ class InventoryGroup {
       'https://x4t7-ilri-ywed.n7d.xano.io/api:6-CZ9z54';
   static Map<String, String> headers = {
     'Authorization': 'Bearer [token]',
-    'X-data-source': 'dev',
   };
   static AddProductToInventoryCall addProductToInventoryCall =
       AddProductToInventoryCall();
@@ -8904,7 +8668,6 @@ class AddProductToInventoryCall {
       callType: ApiCallType.POST,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -8939,7 +8702,6 @@ class GetProductInventoryCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'page': page,
@@ -9021,7 +8783,6 @@ class EditProductInventoryCall {
       callType: ApiCallType.PUT,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -9051,7 +8812,6 @@ class DeleteProdutcInventoryCall {
       callType: ApiCallType.DELETE,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'product_inventory_id ': productInventoryId,
@@ -9080,7 +8840,6 @@ class GetAllStatusInventoryCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       returnBody: true,
@@ -9114,7 +8873,6 @@ class AddQuantityInventoryCall {
       callType: ApiCallType.POST,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -9152,7 +8910,6 @@ class RemoveQuantityInventoryCall {
       callType: ApiCallType.POST,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -9184,7 +8941,6 @@ class QueryAllLogsCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'page': page,
@@ -9230,7 +8986,6 @@ class QueryAllLogsCloneCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'projects_id': projectsId,
@@ -9270,7 +9025,6 @@ class ExportInventoryCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'category_id': categoryId,
@@ -9304,7 +9058,6 @@ class StripeGroup {
       'https://x4t7-ilri-ywed.n7d.xano.io/api:UQuTJ3vx';
   static Map<String, String> headers = {
     'Authorization': 'Bearer [token]',
-    'X-data-source': 'dev',
   };
   static SessionsCall sessionsCall = SessionsCall();
   static PricesCall pricesCall = PricesCall();
@@ -9342,7 +9095,6 @@ class SessionsCall {
       callType: ApiCallType.POST,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {},
       body: ffApiRequestBody,
@@ -9376,7 +9128,6 @@ class PricesCall {
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
-        'X-data-source': 'dev',
       },
       params: {
         'payment_intent': paymentIntent,
@@ -9523,7 +9274,6 @@ class ImportCronogramaCall {
       apiUrl: '${baseUrl}/import_cronograma',
       callType: ApiCallType.POST,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
@@ -9552,7 +9302,6 @@ class GetUsersCall {
       apiUrl: '${baseUrl}/users',
       callType: ApiCallType.GET,
       headers: {
-        'X-data-source': 'dev',
         'Authorization': 'Bearer ${bearerAuth}',
       },
       params: {},
