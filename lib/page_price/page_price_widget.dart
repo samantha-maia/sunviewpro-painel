@@ -1525,7 +1525,6 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                     FFButtonWidget(
                                                   onPressed: () async {
                                                     var _shouldSetState = false;
-                                                    var _shouldSetState = false;
                                                     FFAppState().update(() {});
                                                     _model.aPiAuthTokenTap2 =
                                                         await AuthenticationGroup
