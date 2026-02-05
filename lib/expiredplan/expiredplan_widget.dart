@@ -1348,9 +1348,9 @@ class _ExpiredplanWidgetState extends State<ExpiredplanWidget> {
                                                             .sessionsCall
                                                             .call(
                                                       successUrl:
-                                                          'https://parque-solar-jeei7f.flutterflow.app/dashboard',
+                                                          'https://sunviewpro-painel.vercel.app/dashboard',
                                                       cancelUrl:
-                                                          'https://parque-solar-jeei7f.flutterflow.app/pagePrice',
+                                                          'https://sunviewpro-painel.vercel.app/pagePrice',
                                                       companyId: FFAppState()
                                                           .infoUser
                                                           .companyId,
