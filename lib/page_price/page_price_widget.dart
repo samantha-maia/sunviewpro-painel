@@ -1831,7 +1831,7 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                               .sessionsCall
                                                               .call(
                                                         successUrl:
-                                                            'https://parque-solar-jeei7f.flutterflow.app/dashboard',
+                                                            'https://sunviewpro-painel-7lme4zt72-renan-santos-projects-43ce84e5.vercel.app/dashboard',
                                                         cancelUrl:
                                                             'https://parque-solar-jeei7f.flutterflow.app/pagePrice',
                                                         companyId:
@@ -2769,7 +2769,7 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                                   .sessionsCall
                                                                   .call(
                                                             successUrl:
-                                                                'https://parque-solar-jeei7f.flutterflow.app/dashboard',
+                                                                'https://sunviewpro-painel-7lme4zt72-renan-santos-projects-43ce84e5.vercel.app/dashboard',
                                                             cancelUrl:
                                                                 'https://parque-solar-jeei7f.flutterflow.app/pagePrice',
                                                             companyId: widget!
