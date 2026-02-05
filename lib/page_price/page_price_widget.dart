@@ -1833,7 +1833,7 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                         successUrl:
                                                             'https://sunviewpro-painel-7lme4zt72-renan-santos-projects-43ce84e5.vercel.app/dashboard',
                                                         cancelUrl:
-                                                            'https://parque-solar-jeei7f.flutterflow.app/pagePrice',
+                                                            'https://sunviewpro-painel-e903zj52k-renan-santos-projects-43ce84e5.vercel.app/pagePrice',
                                                         companyId:
                                                             widget!.companyID,
                                                         price:
