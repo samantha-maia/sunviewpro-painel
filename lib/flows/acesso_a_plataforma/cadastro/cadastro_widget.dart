@@ -2203,6 +2203,111 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                                 ?.jsonBody ??
                                                             ''),
                                                       )!;
+
+                                                      final userDetailsResponse =
+                                                          await AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .call(
+                                                        bearerAuth:
+                                                            FFAppState().token,
+                                                      );
+
+                                                      if ((userDetailsResponse
+                                                              .succeeded ??
+                                                          true)) {
+                                                        FFAppState().infoUser =
+                                                            VarInfoUserStruct(
+                                                          id: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .id(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          name: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .name(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          email: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .email(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          phone: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .phone(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          usersPermissionsId: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .permissionsId(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          usersSystemAccessId: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .systemId(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          usersRolesId:
+                                                              AuthenticationGroup
+                                                                  .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                                  .rolesId(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          usersControlSystemId: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .controlId(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          url: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .img(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          sprintIdAtiva:
+                                                              AuthenticationGroup
+                                                                  .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                                  .sprintID(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          companyId:
+                                                              AuthenticationGroup
+                                                                  .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                                  .companyID(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                          plan: AuthenticationGroup
+                                                              .getTheRecordBelongingToTheAuthenticationTokenCall
+                                                              .paymentID(
+                                                            (userDetailsResponse
+                                                                    .jsonBody ??
+                                                                ''),
+                                                          ),
+                                                        );
+                                                        FFAppState()
+                                                            .update(() {});
+                                                      }
                                                       safeSetState(() {});
                                                       _model.page = 2;
                                                       safeSetState(() {});
