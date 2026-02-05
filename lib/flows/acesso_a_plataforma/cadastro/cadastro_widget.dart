@@ -2184,6 +2184,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                           .text,
                                                       profilePicture: _model
                                                           .uploadedLocalFile_uploadDataPvj,
+                                                      envFromCreate: 2,
                                                     );
 
                                                     _shouldSetState = true;
