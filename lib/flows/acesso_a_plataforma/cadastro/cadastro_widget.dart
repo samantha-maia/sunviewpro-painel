@@ -2205,6 +2205,14 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                                 ?.jsonBody ??
                                                             ''),
                                                       )!;
+                                                      FFAppState().update(() {});
+
+                                                      // Register user in custom auth system
+                                                      GoRouter.of(context).prepareAuthEvent();
+                                                      await authManager.signIn(
+                                                        authenticationToken: FFAppState().token,
+                                                      );
+
 
                                                       final userDetailsResponse =
                                                           await AuthenticationGroup
