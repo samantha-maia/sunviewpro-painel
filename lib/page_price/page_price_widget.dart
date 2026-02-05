@@ -1525,97 +1525,7 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                     FFButtonWidget(
                                                   onPressed: () async {
                                                     var _shouldSetState = false;
-                                                    FFAppState().infoUser =
-                                                        VarInfoUserStruct();
-                                                    FFAppState()
-                                                        .navBarSelection = 1;
-                                                    FFAppState()
-                                                        .filterManufacturers = [];
-                                                    FFAppState()
-                                                        .listTypeManufacturers = [];
-                                                    FFAppState()
-                                                        .listTypeModules = [];
-                                                    FFAppState()
-                                                        .filterTypeModules = [];
-                                                    FFAppState().projectsInfo =
-                                                        ProjectsInfo1Struct();
-                                                    FFAppState().setIds = [];
-                                                    FFAppState()
-                                                        .listSequenciaEstacas = [];
-                                                    FFAppState().user0 = [];
-                                                    FFAppState().itemsReceived =
-                                                        0;
-                                                    FFAppState().nextPage = 0;
-                                                    FFAppState().prevPage = 0;
-                                                    FFAppState().itemsTotal = 0;
-                                                    FFAppState().loading =
-                                                        false;
-                                                    FFAppState().teamId = 0;
-                                                    FFAppState().filterUserSet =
-                                                        [];
-                                                    FFAppState()
-                                                        .infostrackerstype = [];
-                                                    FFAppState().qtdEstacas =
-                                                        [];
-                                                    FFAppState().form1 = false;
-                                                    FFAppState().form2 = false;
-                                                    FFAppState()
-                                                        .statusCheckGlobal = [];
-                                                    FFAppState().ultimosClicks =
-                                                        [];
-                                                    FFAppState().idEstaca = 0;
-                                                    FFAppState()
-                                                        .addFileiraTracker = [];
-                                                    FFAppState().idsExistentes =
-                                                        [];
-                                                    FFAppState().esqueleto1 =
-                                                        false;
-                                                    FFAppState().esqueleto2 =
-                                                        false;
-                                                    FFAppState()
-                                                            .excluiuTrackers =
-                                                        false;
-                                                    FFAppState().id = 0;
-                                                    FFAppState().actionReturn =
-                                                        false;
-                                                    FFAppState().jsonRowsRef =
-                                                        [];
-                                                    FFAppState()
-                                                        .filtroIdsStatusStakes = [];
-                                                    FFAppState()
-                                                        .filtroIdsStatusTracker = [];
-                                                    FFAppState()
-                                                        .filtroIdsTypeTracker = [];
-                                                    FFAppState()
-                                                        .filtroIdsCargo = [];
-                                                    FFAppState()
-                                                        .filtroEquipamentos = [];
-                                                    FFAppState().filtroTeams =
-                                                        [];
-                                                    FFAppState().secaoVazia =
-                                                        [];
-                                                    FFAppState().fileiraVazia =
-                                                        [];
-                                                    FFAppState().trackerVazio =
-                                                        [];
-                                                    FFAppState().listaVazia =
-                                                        [];
-                                                    FFAppState()
-                                                            .filtroBacklogSprint =
-                                                        false;
-                                                    FFAppState()
-                                                        .filterTrackers = [];
-                                                    FFAppState()
-                                                            .filterManufactures =
-                                                        FilterStruct();
-                                                    FFAppState().filterTracker =
-                                                        FilterStruct();
-                                                    FFAppState().filterModules =
-                                                        FilterStruct();
-                                                    FFAppState().datesPicked =
-                                                        [];
-                                                    FFAppState().userLideres =
-                                                        [];
+                                                    var _shouldSetState = false;
                                                     FFAppState().update(() {});
                                                     _model.aPiAuthTokenTap2 =
                                                         await AuthenticationGroup
@@ -1729,9 +1639,9 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                               .sessionsCall
                                                               .call(
                                                         successUrl:
-                                                            'https://sunviewpro-painel-7lme4zt72-renan-santos-projects-43ce84e5.vercel.app/dashboard',
+                                                            'https://sunviewpro-painel.vercel.app/dashboard',
                                                         cancelUrl:
-                                                            'https://sunviewpro-painel-e903zj52k-renan-santos-projects-43ce84e5.vercel.app/pagePrice',
+                                                            'https://sunviewpro-painel.vercel.app/pagePrice',
                                                         companyId:
                                                             widget!.companyID,
                                                         price:
@@ -2450,106 +2360,7 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                       onPressed: () async {
                                                         var _shouldSetState =
                                                             false;
-                                                        FFAppState().infoUser =
-                                                            VarInfoUserStruct();
-                                                        FFAppState()
-                                                            .navBarSelection = 1;
-                                                        FFAppState()
-                                                            .filterManufacturers = [];
-                                                        FFAppState()
-                                                            .listTypeManufacturers = [];
-                                                        FFAppState()
-                                                            .listTypeModules = [];
-                                                        FFAppState()
-                                                            .filterTypeModules = [];
-                                                        FFAppState()
-                                                                .projectsInfo =
-                                                            ProjectsInfo1Struct();
-                                                        FFAppState().setIds =
-                                                            [];
-                                                        FFAppState()
-                                                            .listSequenciaEstacas = [];
-                                                        FFAppState().user0 = [];
-                                                        FFAppState()
-                                                            .itemsReceived = 0;
-                                                        FFAppState().nextPage =
-                                                            0;
-                                                        FFAppState().prevPage =
-                                                            0;
-                                                        FFAppState()
-                                                            .itemsTotal = 0;
-                                                        FFAppState().loading =
-                                                            false;
-                                                        FFAppState().teamId = 0;
-                                                        FFAppState()
-                                                            .filterUserSet = [];
-                                                        FFAppState()
-                                                            .infostrackerstype = [];
-                                                        FFAppState()
-                                                            .qtdEstacas = [];
-                                                        FFAppState().form1 =
-                                                            false;
-                                                        FFAppState().form2 =
-                                                            false;
-                                                        FFAppState()
-                                                            .statusCheckGlobal = [];
-                                                        FFAppState()
-                                                            .ultimosClicks = [];
-                                                        FFAppState().idEstaca =
-                                                            0;
-                                                        FFAppState()
-                                                            .addFileiraTracker = [];
-                                                        FFAppState()
-                                                            .idsExistentes = [];
-                                                        FFAppState()
-                                                            .esqueleto1 = false;
-                                                        FFAppState()
-                                                            .esqueleto2 = false;
-                                                        FFAppState()
-                                                                .excluiuTrackers =
-                                                            false;
-                                                        FFAppState().id = 0;
-                                                        FFAppState()
-                                                                .actionReturn =
-                                                            false;
-                                                        FFAppState()
-                                                            .jsonRowsRef = [];
-                                                        FFAppState()
-                                                            .filtroIdsStatusStakes = [];
-                                                        FFAppState()
-                                                            .filtroIdsStatusTracker = [];
-                                                        FFAppState()
-                                                            .filtroIdsTypeTracker = [];
-                                                        FFAppState()
-                                                            .filtroIdsCargo = [];
-                                                        FFAppState()
-                                                            .filtroEquipamentos = [];
-                                                        FFAppState()
-                                                            .filtroTeams = [];
-                                                        FFAppState()
-                                                            .secaoVazia = [];
-                                                        FFAppState()
-                                                            .fileiraVazia = [];
-                                                        FFAppState()
-                                                            .trackerVazio = [];
-                                                        FFAppState()
-                                                            .listaVazia = [];
-                                                        FFAppState()
-                                                                .filtroBacklogSprint =
-                                                            false;
-                                                        FFAppState()
-                                                            .filterTrackers = [];
-                                                        FFAppState()
-                                                                .filterManufactures =
-                                                            FilterStruct();
-                                                        FFAppState()
-                                                                .filterTracker =
-                                                            FilterStruct();
-                                                        FFAppState()
-                                                                .filterModules =
-                                                            FilterStruct();
-                                                        FFAppState()
-                                                            .datesPicked = [];
+
                                                         FFAppState()
                                                             .update(() {});
                                                         _model.aPiAuthTokenTap =
@@ -2667,9 +2478,9 @@ class _PagePriceWidgetState extends State<PagePriceWidget> {
                                                                   .sessionsCall
                                                                   .call(
                                                             successUrl:
-                                                                'https://sunviewpro-painel-7lme4zt72-renan-santos-projects-43ce84e5.vercel.app/dashboard',
+                                                                'https://sunviewpro-painel.vercel.app/dashboard',
                                                             cancelUrl:
-                                                                'https://parque-solar-jeei7f.flutterflow.app/pagePrice',
+                                                                'https://sunviewpro-painel.vercel.app/pagePrice',
                                                             companyId: widget!
                                                                 .companyID,
                                                             price:
