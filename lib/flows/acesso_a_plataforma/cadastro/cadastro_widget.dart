@@ -2428,11 +2428,9 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                   if (_shouldSetState)
                                                     safeSetState(() {});
                                                 },
-                                                text:
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                  '5g7gungv' /* Cadastrar emrpesa */,
-                                                ),
+                                                text: _model.page == 1
+                                                    ? 'Cadastrar usuário'
+                                                    : 'Cadastrar empresa',
                                                 options: FFButtonOptions(
                                                   width: double.infinity,
                                                   height: 40.0,
@@ -5491,12 +5489,9 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                           if (_shouldSetState)
                                                             safeSetState(() {});
                                                         },
-                                                        text:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '42a3qbzs' /* Cadastrar-se */,
-                                                        ),
+                                                        text: _model.page == 1
+                                                            ? 'Cadastrar usuário'
+                                                            : 'Cadastrar empresa',
                                                         options:
                                                             FFButtonOptions(
                                                           width:
