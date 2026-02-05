@@ -52,9 +52,10 @@ class _TrackerWebViewState extends State<TrackerWebView> {
         'tracker-webview-${widget.locale}-${DateTime.now().millisecondsSinceEpoch}';
 
     if (kIsWeb) {
-      final uri = Uri.parse(
-        'https://samantha-maia.github.io/mapa-de-tracker/',
-      ).replace(queryParameters: {
+      final baseUrl = Uri.base.origin; // Obtém a URL base atual (ex: localhost ou vercel.app)
+      final mapUrl = '$baseUrl/mapa/index.html';
+      
+      final uri = Uri.parse(mapUrl).replace(queryParameters: {
         'projectId': widget.projectsID.toString(),
         'fieldId': widget.fieldsID.toString(),
         'authToken': widget.authToken,

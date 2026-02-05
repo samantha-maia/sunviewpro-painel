@@ -943,14 +943,17 @@ class _ProjetoDetalhesWidgetState extends State<ProjetoDetalhesWidget> {
                                                   FFAppState().projectsInfo.id,
                                             );
 
-                                            FFAppState().teamId =
-                                                ProjectsGroup.getTeamsRecordCall
-                                                    .id(
-                                                      (_model.teams?.jsonBody ??
-                                                          ''),
-                                                    )!
-                                                    .firstOrNull!;
-                                            FFAppState().update(() {});
+                                            if ((_model.teams?.succeeded ?? false)) {
+                                              final teamIds = ProjectsGroup.getTeamsRecordCall
+                                                  .id(
+                                                    (_model.teams?.jsonBody ?? ''),
+                                                  );
+                                              
+                                              if (teamIds != null && teamIds.isNotEmpty) {
+                                                FFAppState().teamId = teamIds.first;
+                                                FFAppState().update(() {});
+                                              }
+                                            }
 
                                             context.pushNamed(
                                               GestaoDeEquipeWidget.routeName,
