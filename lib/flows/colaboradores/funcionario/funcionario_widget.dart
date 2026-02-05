@@ -1829,7 +1829,7 @@ class _FuncionarioWidgetState extends State<FuncionarioWidget> {
                                                                                     )?.toString(),
                                                                                     'https://x8ki-letl-twmt.n7.xano.io/vault/iaWPz-tD/8ler69Ci8dU8B1ExemIRgXluexs/JGrgRQ../no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg ',
                                                                                   ),
-                                                                                  pageTxt: 'colaborador',
+                                                                                  pageTxt: '1',
                                                                                   usePermission: getJsonField(
                                                                                     listCollaboratorItem,
                                                                                     r'''$.users_permissions_id''',
